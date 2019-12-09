@@ -7,8 +7,7 @@
 //
 
 #import "XBToast.h"
-#import <Masonry.h>
-#import "Header-Public.h"
+#import "Masonry.h"
 
 const CGFloat hSpaceOfTextAndBorder = 10;
 const CGFloat vSpaceOfTextAndBorder = 5;
@@ -106,11 +105,10 @@ const CGFloat vSpaceOfTextAndBorder = 5;
             make.right.lessThanOrEqualTo(self).offset(- hSpaceOfTextAndBorder);
             make.top.greaterThanOrEqualTo(self).offset(vSpaceOfTextAndBorder);
             make.bottom.lessThanOrEqualTo(self).offset(- vSpaceOfTextAndBorder);
-            make.width.mas_lessThanOrEqualTo(kScreenWidth - 100);
+            make.width.mas_lessThanOrEqualTo([UIScreen mainScreen].bounds.size.width - 100);
         }];
         _lb_tip.textAlignment = NSTextAlignmentCenter;
         _lb_tip.numberOfLines = 0;
-        _lb_tip.font = kFont(kSize_S4, kWeight_W1);
         _lb_tip.textColor = [UIColor whiteColor];
     }
     return _lb_tip;

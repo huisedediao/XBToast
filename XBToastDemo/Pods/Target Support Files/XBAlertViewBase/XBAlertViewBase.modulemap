@@ -1,0 +1,6 @@
+framework module XBAlertViewBase {
+  umbrella header "XBAlertViewBase-umbrella.h"
+
+  export *
+  module * { export * }
+}

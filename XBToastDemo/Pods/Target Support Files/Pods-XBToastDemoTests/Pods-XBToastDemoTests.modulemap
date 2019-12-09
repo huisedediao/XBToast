@@ -1,0 +1,6 @@
+framework module Pods_XBToastDemoTests {
+  umbrella header "Pods-XBToastDemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

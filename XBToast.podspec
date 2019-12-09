@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "XBToast"
   spec.version      = "0.0.1"
-  spec.summary      = "toast for iOS"
+  spec.summary      = "toast"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -65,7 +65,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+  spec.platform     = :ios, "9.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -136,4 +136,8 @@ Pod::Spec.new do |spec|
   # spec.dependency "JSONKit", "~> 1.4"
 
   spec.dependency "XBAlertViewBase"
+  spec.dependency "Masonry"
+# 如果需要在头文件中引用自己创建的类
+  spec.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
+
 end
